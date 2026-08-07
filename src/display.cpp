@@ -1,4 +1,6 @@
+#include "../include/display.h"
 #include <iostream>
+
 void show_title() {
   std::cout << "\n----------------------"
                "\nSpace Adventure Trader"
