@@ -1,10 +1,11 @@
 #include "../include/display.h"
 #include <iostream>
+#include <string>
 int main() {
   // Todo: replace with string
-  std::cout << "Enter number ";
-  int name{};
-  std::cin >> name;
+  std::cout << "Enter name ";
+  std::string name{};
+  std::getline(std::cin >> std::ws, name);
 
   const char *planet{"Earth"};
   int credits{1000};

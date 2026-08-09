@@ -1,5 +1,6 @@
 #include "../include/display.h"
 #include <iostream>
+#include <string>
 
 void show_title() {
   std::cout << "\n----------------------"
@@ -7,7 +8,7 @@ void show_title() {
                "\n----------------------";
 }
 
-void welcome(int name) { std::cout << "\nWelcome " << name; }
+void welcome(std::string name) { std::cout << "\nWelcome " << name; }
 
 void show_stats(const char *planet, int credits, int fuel) {
   std::cout << "\n---------------------------------";
