@@ -7,11 +7,11 @@ int main() {
   std::string name{};
   std::getline(std::cin >> std::ws, name);
 
-  const char *planet{"Earth"};
+  std::string planet{"Earth"};
   int credits{1000};
   int fuel{50};
 
-  show_title();
+  showTitle();
   welcome(name);
-  show_stats(planet, credits, fuel);
+  showStats(planet, credits, fuel);
 }

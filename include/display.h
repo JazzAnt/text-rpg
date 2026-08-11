@@ -2,8 +2,8 @@
 #ifndef DISPLAY
 #define DISPLAY
 
-void show_title();
+void showTitle();
 void welcome(std::string name);
-void show_stats(const char *planet, int credits, int fuel);
+void showStats(std::string planet, int credits, int fuel);
 
 #endif
