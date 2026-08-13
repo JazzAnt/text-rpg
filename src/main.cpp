@@ -1,13 +1,14 @@
 #include "../include/display.h"
 #include <iostream>
 #include <string>
+#include <string_view>
 int main() {
   // Todo: replace with string
   std::cout << "Enter name ";
   std::string name{};
   std::getline(std::cin >> std::ws, name);
 
-  const std::string startPlanet{"Earth"};
+  constexpr std::string_view startPlanet{"Earth"};
   constexpr int startCredits{1000};
   constexpr int startFuel{50};
 

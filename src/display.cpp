@@ -1,7 +1,7 @@
 #include "../include/display.h"
 #include <iomanip>
 #include <iostream>
-#include <string>
+#include <string_view>
 
 void showLine(bool doubleLine) {
   if (doubleLine) {
@@ -19,9 +19,9 @@ void showTitle() {
   showLine(true);
 }
 
-void welcome(std::string name) { std::cout << "\nWelcome " << name; }
+void welcome(std::string_view name) { std::cout << "\nWelcome " << name; }
 
-void showStats(std::string planet, int credits, int fuel) {
+void showStats(std::string_view planet, int credits, int fuel) {
   int width{16};
   std::cout << std::left;
   showLine(false);
