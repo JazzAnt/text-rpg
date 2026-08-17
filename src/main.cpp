@@ -1,3 +1,4 @@
+#include "../include/ctrls_base.h"
 #include "../include/display.h"
 #include <iostream>
 #include <string>
@@ -18,19 +19,13 @@ int main() {
 
   bool playing{true};
 
-  while (playing) {
-    std::cout << "\n"
-              << "\nWhat do you want to do?"
-              << "\n1. Travel"
-              << "\n2. Buy"
-              << "\n3. Sell"
-              << "\n4. Profit Report"
-              << "\n0. Quit"
-              << "\n"
-              << "\nEnter your choice: ";
+  std::string currentPlanet{startPlanet};
+  int credits{startCredits};
+  int fuel{startFuel};
 
-    int choice{0};
-    std::cin >> choice;
+  while (playing) {
+    showControls();
+    int choice{getChoice()};
     switch (choice) {
     case 1:
       std::cout << "\nTravelling";
