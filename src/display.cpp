@@ -21,11 +21,11 @@ void showTitle() {
 
 void welcome(std::string_view name) { std::cout << "\nWelcome " << name; }
 
-void showStats(std::string_view planet, int credits, int fuel) {
+void showStats(int planetIndex, int credits, int fuel) {
   int width{16};
   std::cout << std::left;
   showLine(false);
-  std::cout << std::setw(width) << "\nCurrent Planet" << ": " << planet;
+  std::cout << std::setw(width) << "\nCurrent Planet" << ": " << planetIndex;
   std::cout << std::setw(width) << "\nCredits" << ": " << credits;
   std::cout << std::setw(width) << "\nFuel" << ": " << fuel << "/100";
   showLine(false);

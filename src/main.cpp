@@ -1,35 +1,41 @@
 #include "../include/ctrls_base.h"
+#include "../include/ctrls_travel.h"
 #include "../include/display.h"
 #include <iostream>
 #include <string>
-#include <string_view>
 int main() {
   // Todo: replace with string
   std::cout << "Enter name ";
   std::string name{};
   std::getline(std::cin >> std::ws, name);
 
-  constexpr std::string_view startPlanet{"Earth"};
+  constexpr int startPlanet{3};
   constexpr int startCredits{1000};
   constexpr int startFuel{50};
 
   showTitle();
   welcome(name);
-  showStats(startPlanet, startCredits, startFuel);
 
   bool playing{true};
 
-  std::string currentPlanet{startPlanet};
+  int currentPlanet{startPlanet};
   int credits{startCredits};
   int fuel{startFuel};
 
   while (playing) {
+    showStats(currentPlanet, credits, fuel);
     showControls();
     int choice{getChoice()};
     switch (choice) {
-    case 1:
+    case 1: {
       std::cout << "\nTravelling";
+      showTravelControls(currentPlanet);
+      int travelTo{getChoice()};
+      showTravelMessage(currentPlanet, travelTo);
+      currentPlanet = travelTo;
+      fuel -= 5;
       break;
+    }
     case 2:
       std::cout << "\nBuying";
       break;
