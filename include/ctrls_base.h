@@ -2,5 +2,5 @@
 #define BASE_CONTROLS
 void showControls();
 
-int getChoice();
+int cin_getChoice();
 #endif

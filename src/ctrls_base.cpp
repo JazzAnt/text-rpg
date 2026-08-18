@@ -10,7 +10,7 @@ void showControls() {
             << "\n0. Quit";
 }
 
-int getChoice() {
+int cin_getChoice() {
   int choice{};
   std::cout << "\nEnter your choice: ";
   std::cin >> choice;

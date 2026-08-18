@@ -26,12 +26,12 @@ int main() {
   while (playing) {
     showStats(currentPlanet, credits, fuel);
     showControls();
-    int choice{getChoice()};
+    int choice{cin_getChoice()};
     switch (choice) {
     case 1: {
       std::cout << "\nTravelling";
       showTravelControls(currentPlanet);
-      int travelTo{getChoice()};
+      int travelTo{cin_getChoice()};
       showTravelMessage(currentPlanet, travelTo);
       currentPlanet = travelTo;
       fuel -= 5;
