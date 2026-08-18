@@ -1,4 +1,5 @@
 #include "../include/ctrls_base.h"
+#include "../include/ctrls_trade.h"
 #include "../include/ctrls_travel.h"
 #include "../include/display.h"
 #include <iostream>
@@ -36,11 +37,15 @@ int main() {
       fuel -= 5;
       break;
     }
-    case 2:
-      std::cout << "\nBuying";
+    case 2: {
+      showMarketPrices();
+      cin_getChoiceOfProductId();
+      cin_getBuyOrSell();
+      cin_getTradeQuantity(true);
       break;
+    }
     case 3:
-      std::cout << "\nSelling";
+      std::cout << "\nUpgrading";
       break;
     case 4:
       std::cout << "\nReporting";

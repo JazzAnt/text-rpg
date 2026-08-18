@@ -4,8 +4,8 @@
 void showControls() {
   std::cout << "\nWhat do you want to do?"
             << "\n1. Travel"
-            << "\n2. Buy"
-            << "\n3. Sell"
+            << "\n2. Trade"
+            << "\n3. Upgrade"
             << "\n4. Profit Report"
             << "\n0. Quit";
 }
