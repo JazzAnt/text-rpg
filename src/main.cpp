@@ -4,7 +4,9 @@
 #include "../include/display.h"
 #include <iostream>
 #include <string>
-int main() {
+
+int main()
+{
   // Todo: replace with string
   std::cout << "Enter name ";
   std::string name{};
@@ -23,12 +25,15 @@ int main() {
   int credits{startCredits};
   int fuel{startFuel};
 
-  while (playing) {
+  while (playing)
+  {
     showStats(currentPlanet, credits, fuel);
     showControls();
     int choice{cin_getChoice()};
-    switch (choice) {
-    case 1: {
+    switch (choice)
+    {
+    case 1:
+    {
       std::cout << "\nTravelling";
       showTravelControls(currentPlanet);
       int travelTo{cin_getChoice()};
@@ -37,7 +42,8 @@ int main() {
       fuel -= 5;
       break;
     }
-    case 2: {
+    case 2:
+    {
       showMarketPrices();
       cin_getChoiceOfProductId();
       cin_getBuyOrSell();
@@ -45,18 +51,26 @@ int main() {
       break;
     }
     case 3:
+    {
       std::cout << "\nUpgrading";
       break;
+    }
     case 4:
+    {
       std::cout << "\nReporting";
       break;
+    }
     case 0:
+    {
       std::cout << "\nGoodbye " << name << "!";
       playing = false;
       break;
+    }
     default:
+    {
       std::cout << "\nInvalid choice!";
       break;
+    }
     }
   }
 }

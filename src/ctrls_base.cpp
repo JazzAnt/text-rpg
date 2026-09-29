@@ -1,7 +1,8 @@
 #include "../include/ctrls_base.h"
 #include <iostream>
 
-void showControls() {
+void showControls()
+{
   std::cout << "\nWhat do you want to do?"
             << "\n1. Travel"
             << "\n2. Trade"
@@ -10,7 +11,8 @@ void showControls() {
             << "\n0. Quit";
 }
 
-int cin_getChoice() {
+int cin_getChoice()
+{
   int choice{};
   std::cout << "\nEnter your choice: ";
   std::cin >> choice;

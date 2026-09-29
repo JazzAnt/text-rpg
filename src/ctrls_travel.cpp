@@ -3,7 +3,8 @@
 
 void printCurrent() { std::cout << " (current)"; }
 
-void showTravelControls(int currentIndex) {
+void showTravelControls(int currentIndex)
+{
   std::cout << "\nWhere are you travelling to?";
   std::cout << "\n0. Sun";
   if (currentIndex == 0)
@@ -46,7 +47,8 @@ void showTravelControls(int currentIndex) {
     printCurrent();
 }
 
-void showTravelMessage(int currentIndex, int targetIndex) {
+void showTravelMessage(int currentIndex, int targetIndex)
+{
   if (currentIndex == targetIndex)
     std::cout << "\nYou're already here!";
   else

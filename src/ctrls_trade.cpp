@@ -4,8 +4,8 @@
 #include <iostream>
 #include <string_view>
 
-void showProduct(int itemId, std::string_view itemName, int price,
-                 int ownedAmount) {
+void showProduct(int itemId, std::string_view itemName, int price, int ownedAmount)
+{
   int itemWidth{3};
   int nameWidth{20};
   int priceWidth{20};
@@ -18,7 +18,9 @@ void showProduct(int itemId, std::string_view itemName, int price,
   std::cout << std::setw(priceWidth) << price << "| ";
   std::cout << std::setw(ownedWidth) << ownedAmount << "| ";
 }
-void showMarketPrices() {
+
+void showMarketPrices()
+{
   int itemWidth{3};
   int nameWidth{20};
   int priceWidth{20};
@@ -31,11 +33,14 @@ void showMarketPrices() {
   std::cout << std::setw(ownedWidth) << "Owned" << "| ";
   std::cout << "\n-------------------------------------------------------------"
                "-----------";
-  for (int i = 1; i < 10; ++i) {
+  for (int i = 1; i < 10; ++i)
+  {
     showProduct(i, "placeholder", (i * 10) % 13, 0);
   }
 }
-int cin_getChoiceOfProductId() {
+
+int cin_getChoiceOfProductId()
+{
   std::cout << "\nEnter the ID of the product to trade"
             << "\n(Enter 0 to quit trading)"
             << "\n";
@@ -43,7 +48,9 @@ int cin_getChoiceOfProductId() {
   std::cin >> choice;
   return choice;
 }
-int cin_getBuyOrSell() {
+
+int cin_getBuyOrSell()
+{
   std::cout << "\nEnter 1 to buy"
             << "\nEnter 2 to sell"
             << "\nEnter 0 to cancel transaction"
@@ -52,7 +59,9 @@ int cin_getBuyOrSell() {
   std::cin >> choice;
   return choice;
 }
-int cin_getTradeQuantity(bool isBuying) {
+
+int cin_getTradeQuantity(bool isBuying)
+{
   std::cout << "\nEnter amount to " << ((isBuying) ? "buy" : "sell")
             << "\n(Enter 0 to cancel transaction)"
             << "\n";

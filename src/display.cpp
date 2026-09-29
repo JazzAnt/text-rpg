@@ -3,15 +3,20 @@
 #include <iostream>
 #include <string_view>
 
-void showLine(bool doubleLine) {
-  if (doubleLine) {
+void showLine(bool doubleLine)
+{
+  if (doubleLine)
+  {
     std::cout << "\n==================================";
-  } else {
+  }
+  else
+  {
     std::cout << "\n----------------------------------";
   }
 }
 
-void showTitle() {
+void showTitle()
+{
   int padding{6};
   showLine(true);
   std::cout << std::left;
@@ -21,7 +26,8 @@ void showTitle() {
 
 void welcome(std::string_view name) { std::cout << "\nWelcome " << name; }
 
-void showStats(int planetIndex, int credits, int fuel) {
+void showStats(int planetIndex, int credits, int fuel)
+{
   int width{16};
   std::cout << std::left;
   showLine(false);
