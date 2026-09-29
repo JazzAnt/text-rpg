@@ -6,10 +6,6 @@ void printCurrent() { std::cout << " (current)"; }
 void showTravelControls(int currentIndex)
 {
   std::cout << "\nWhere are you travelling to?";
-  std::cout << "\n0. Sun";
-  if (currentIndex == 0)
-    printCurrent();
-
   std::cout << "\n1. Mercury";
   if (currentIndex == 1)
     printCurrent();
@@ -45,13 +41,26 @@ void showTravelControls(int currentIndex)
   std::cout << "\n9. ???";
   if (currentIndex == 9)
     printCurrent();
+
+  std::cout << "\n0. Cancel";
 }
 
 void showTravelMessage(int currentIndex, int targetIndex)
 {
+  if (targetIndex == 0)
+  {
+    std::cout << "Cancelled";
+    return;
+  }
+
   if (currentIndex == targetIndex)
+  {
     std::cout << "\nYou're already here!";
+  }
   else
+  {
     std::cout << "\nTravelling from " << currentIndex << " to " << targetIndex;
+    std::cout << "\nSpending 5 fuel";
+  }
   // TODO list of planets? So doesn't have to do if else for every
 }
