@@ -1,5 +1,6 @@
+#include "../include/inputs.h"
+
 #include <cstdlib>
-#include <ios>
 #include <iostream>
 #include <limits>
 #include <string>
