@@ -1,7 +1,6 @@
 #ifndef INPUTS_H
 #define INPUTS_H
 
-#include <iostream>
 #include <string>
 #include <string_view>
 
