@@ -12,10 +12,10 @@ namespace MenuMain
 void showTitle()
 {
   int padding{6};
-  std::cout << "\n" << Dividers::divider_2;
+  std::cout << Dividers::divider_2;
   std::cout << std::left;
   std::cout << std::setw(padding) << "\n" << "Space Adventure Trader";
-  std::cout << "\n" << Dividers::divider_2;
+  std::cout << Dividers::divider_2;
 }
 
 std::string getPlayerName() { return Cin::getString("Enter player name"); }
