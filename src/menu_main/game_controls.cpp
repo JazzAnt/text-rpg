@@ -1,6 +1,6 @@
 #include "../../include/menu_main/game_controls.h"
 #include "../../include/constants.h"
-#include "../../include/constants_str.h"
+#include "../../include/dividers.h"
 #include "../../include/inputs.h"
 #include <iomanip>
 
@@ -12,13 +12,13 @@ namespace MenuMain
 void showResources(int planetIndex, int credits, int fuel, int maxFuel)
 {
   std::cout << std::left;
-  std::cout << "\n" << Constants_str::header_resources;
+  std::cout << "\n" << Dividers::header_resources;
   std::cout << "\n* " << std::setw(Constants::width_resources) << "Current Planet" << ": "
             << planetIndex;
   std::cout << "\n* " << std::setw(Constants::width_resources) << "Credits" << ": " << credits;
   std::cout << "\n* " << std::setw(Constants::width_resources) << "Fuel" << ": " << fuel << "/"
             << maxFuel;
-  std::cout << "\n" << Constants_str::divider_1;
+  std::cout << "\n" << Dividers::divider_1;
 }
 
 void showControls()

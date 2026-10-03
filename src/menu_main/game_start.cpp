@@ -1,5 +1,5 @@
 #include "../../include/menu_main/game_start.h"
-#include "../../include/constants_str.h"
+#include "../../include/dividers.h"
 #include "../../include/inputs.h"
 
 #include <iomanip>
@@ -12,10 +12,10 @@ namespace MenuMain
 void showTitle()
 {
   int padding{6};
-  std::cout << "\n" << Constants_str::divider_2;
+  std::cout << "\n" << Dividers::divider_2;
   std::cout << std::left;
   std::cout << std::setw(padding) << "\n" << "Space Adventure Trader";
-  std::cout << "\n" << Constants_str::divider_2;
+  std::cout << "\n" << Dividers::divider_2;
 }
 
 std::string getPlayerName() { return Cin::getString("Enter player name"); }
